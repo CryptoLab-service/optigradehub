@@ -1,32 +1,48 @@
-.logo-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: white;
-  font-size: 1.3rem;
-  font-weight: 600;
-}
+// ===== Scroll Reveal on Elements =====
+const reveals = document.querySelectorAll(".reveal");
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add("visible");
+  });
+}, { threshold: 0.2 });
 
-.logo-circle {
-  width: 120px;
-  height: 120px;
-  background: linear-gradient(67.69deg, #1C69B2 2.96%, #611EE8 64.1%);
-  border-radius: 29.5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+reveals.forEach(el => observer.observe(el));
 
-.logo-icon {
-  width: 80.67px;
-  height: 66.64px;
-  background: #FFFFFF;
-  mask-image: url('icon.svg'); /* optional: SVG mask or image here */
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+// ===== FAQ Accordion =====
+const accordions = document.querySelectorAll(".accordion-item");
 
-.logo-text {
-  font-weight: 600;
+accordions.forEach(item => {
+  const header = item.querySelector(".accordion-header");
+  header.addEventListener("click", () => {
+    item.classList.toggle("active");
+  });
+});
+
+// ===== Mobile Nav Toggle =====
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
+// ===== Testimonial Carousel =====
+const testimonials = document.querySelectorAll(".testimonial");
+let index = 0;
+
+function showNextTestimonial() {
+  testimonials.forEach(t => t.classList.remove("visible"));
+  testimonials[index].classList.add("visible");
+  index = (index + 1) % testimonials.length;
 }
+setInterval(showNextTestimonial, 5000); // every 5 seconds
+
+// ===== Back-to-Top Button =====
+const backToTop = document.getElementById("backToTop");
+window.onscroll = () => {
+  backToTop.style.display = window.scrollY > 400 ? "block" : "none";
+};
+
+backToTop.onclick = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
