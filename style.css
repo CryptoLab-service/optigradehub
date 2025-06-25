@@ -32,6 +32,15 @@ header {
   align-items: center;
   padding: 1rem 2rem;
   flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.08); /* subtle white tint */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  margin: 1rem 2rem;
+  position: sticky;
+  top: 1rem;
+  z-index: 1000;
 }
 
 /* Logo Styling Using logo.svg */
