@@ -104,3 +104,16 @@ footer {
   background: var(--dark);
   color: white;
 }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: white;
+}
+
+.logo svg {
+  width: 36px;
+  height: 36px;
+}
