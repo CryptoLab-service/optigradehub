@@ -201,6 +201,35 @@ header {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
+.accordion-header {
+  background: #fff;
+  border: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  transition: background 0.3s ease;
+}
+
+.accordion-header:hover {
+  background: #f0f4f8;
+}
+
+.accordion-body {
+  display: none;
+  padding: 1rem;
+  background: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.accordion-item.active .accordion-body {
+  display: block;
+}
+
 @keyframes pulse {
   0% {
     transform: scale(1);
