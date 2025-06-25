@@ -106,12 +106,12 @@ header {
 
 /* Hero Section */
 .hero {
-  padding: 5rem 2rem;
+  padding: 8rem 2rem 4rem; /* Top padding clears navbar height */
   text-align: center;
   background: linear-gradient(120deg, #004aad, #611EE8);
   color: white;
   position: relative;
-  overflow: hidden;
+  z-index: 1;
 }
 
 .hero-inner {
