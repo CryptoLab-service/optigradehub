@@ -7,10 +7,14 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to top">↑</button>
+
   <header>
     <nav class="navbar">
       <div class="logo">
-        <!-- OptiGrade SVG Logo -->
+        <!-- SVG Logo -->
         <svg width="36" height="36" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
           <rect width="120" height="120" rx="29.5" fill="url(#paint0_linear_802_970)"/>
           <g clip-path="url(#clip0_802_970)">
@@ -19,7 +23,7 @@
           <defs>
             <linearGradient id="paint0_linear_802_970" x1="-11" y1="81" x2="119.738" y2="27.3607" gradientUnits="userSpaceOnUse">
               <stop stop-color="#1C69B2"/>
-              <stop offset="0.677451" stop-color="#611EE8"/>
+              <stop offset="0.677" stop-color="#611EE8"/>
             </linearGradient>
             <clipPath id="clip0_802_970">
               <rect width="80.6667" height="66.6377" fill="white" transform="translate(20 30.1694)"/>
@@ -28,45 +32,108 @@
         </svg>
         <span>OptiGrade</span>
       </div>
+      <button class="menu-toggle">&#9776;</button>
       <ul class="nav-links">
         <li><a href="#overview">Overview</a></li>
         <li><a href="#features">Features</a></li>
-        <li><a href="#cta">Get Started</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Join</a></li>
       </ul>
     </nav>
 
     <section class="hero">
-      <h1>Empowering Learners with Intelligence</h1>
-      <p>Your personalized EduTech companion — track performance, improve grades, and unlock your full potential.</p>
-      <a href="https://www.figma.com/proto/B2L8DOx0u3xuSWPhKpJpO5/OptiGrade-Mobile-App---EduTech?node-id=802-966&p=f&scaling=scale-down&content-scaling=fixed&starting-point-node-id=802%3A966" target="_blank" class="btn-primary">Explore OptiGrade</a>
+      <div class="hero-inner">
+        <h1>Empowering Learners with Intelligence</h1>
+        <p>AI-powered tools for every student. Track progress, get insights, and reach your full potential.</p>
+        <a href="https://www.figma.com/proto/B2L8DOx0u3xuSWPhKpJpO5/OptiGrade-Mobile-App---EduTech?node-id=802-966&p=f&scaling=scale-down&content-scaling=fixed&starting-point-node-id=802%3A966"
+           target="_blank" class="btn-primary">🔗 View Prototype</a>
+      </div>
     </section>
   </header>
 
   <main>
-    <section id="overview" class="section">
+    <section id="overview" class="section reveal">
       <h2>What is OptiGrade?</h2>
-      <p>OptiGrade is a dynamic academic assistant tailored for secondary and post-secondary learners. It provides AI-driven performance tracking, insightful analytics, and adaptive learning recommendations — all in one intuitive dashboard.</p>
+      <p>OptiGrade is a powerful academic assistant for high school and university students. We combine data analytics, adaptive learning, and progress tracking into one easy-to-use platform.</p>
     </section>
 
-    <section id="features" class="section alt">
+    <section id="features" class="section alt reveal">
       <h2>Core Features</h2>
-      <ul class="features-list">
-        <li><strong>📊 Smart Dashboard:</strong> Visualize subject trends and progress</li>
-        <li><strong>🔍 Personalized Tips:</strong> Get AI-powered study insights</li>
-        <li><strong>📱 Mobile-First Design:</strong> Learn anytime, anywhere</li>
-        <li><strong>💡 Interactive Modules:</strong> Engage with bite-sized lessons</li>
-      </ul>
+      <div class="feature-grid">
+        <div class="card">
+          <h3>📊 Performance Insights</h3>
+          <p>Visualize trends across subjects to pinpoint growth areas.</p>
+        </div>
+        <div class="card">
+          <h3>💡 Smart Study Tips</h3>
+          <p>Receive AI-powered recommendations tailored to your progress.</p>
+        </div>
+        <div class="card">
+          <h3>🔔 Goal Reminders</h3>
+          <p>Stay on track with reminders and focus alerts built for learners.</p>
+        </div>
+        <div class="card">
+          <h3>📱 Mobile Ready</h3>
+          <p>Access your dashboard anytime, anywhere — fully responsive.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="cta" class="section center">
-      <h2>Ready to Level Up?</h2>
-      <p>Join thousands of learners transforming their academic journey with OptiGrade.</p>
-      <a href="#" class="btn-secondary">Join the Beta</a>
+    <section id="testimonials" class="section reveal">
+      <h2>What Students Are Saying</h2>
+      <div class="carousel">
+        <div class="testimonial visible">
+          <p>"OptiGrade helped me understand where I was falling behind. I’m now improving in 3 subjects!"</p>
+          <span>— Amina, Student</span>
+        </div>
+        <div class="testimonial">
+          <p>"It's like having a tutor that tracks my progress. The insights are scarily accurate."</p>
+          <span>— Chukwuemeka, University of Lagos</span>
+        </div>
+        <div class="testimonial">
+          <p>"Clean, fast, and actually useful. More people need to know about this."</p>
+          <span>— Fatima, UI/UX Intern</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section alt reveal">
+      <h2>Frequently Asked Questions</h2>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-header">Is OptiGrade free to use?</button>
+          <div class="accordion-body">Yes — during our beta phase, access is 100% free.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">Do I need to install anything?</button>
+          <div class="accordion-body">Nope! OptiGrade is web-based and mobile-optimized.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">Can teachers use it too?</button>
+          <div class="accordion-body">Absolutely. We’re working on educator dashboards next!</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section center reveal">
+      <h2>Join Our Waitlist</h2>
+      <p>Be the first to access OptiGrade when we launch publicly.</p>
+      <form action="https://formspree.io/f/your-form-id" method="POST" class="signup-form">
+        <input type="email" name="email" placeholder="Enter your email" required />
+        <button type="submit" class="btn-secondary">Notify Me</button>
+      </form>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 OptiGrade. All rights reserved.</p>
+    <div class="footer-inner">
+      <p>&copy; 2025 OptiGrade. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#"><img src="icons/github.svg" alt="GitHub" /></a>
+        <a href="#"><img src="icons/linkedin.svg" alt="LinkedIn" /></a>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>
